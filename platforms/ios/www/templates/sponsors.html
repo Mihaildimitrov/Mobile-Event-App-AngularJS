@@ -1,0 +1,35 @@
+<ion-view title="Sponsors" id="page4" class="sponsors-list-container">
+  <ion-nav-buttons side="right" class="has-header">
+    <button class="button button-icon icon ion-android-search" ng-click="showSearch()"></button>
+  </ion-nav-buttons>
+  <ion-content padding="true" class="has-header">
+    <form id="sponsors-form5" class="list search-form" ng-show="showSearchMenu">
+      <label class="item item-input search-field" id="sponsors-search7">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="search" placeholder="" ng-model="data.searchWord">
+      </label>
+      <label class="item item-select select-field" id="sponsors-select13">
+        <span class="input-label">Pick category:</span>
+        <select ng-model="data.sponsorCategory" ng-options="level.id as level.label for level in levels"></select>
+      </label>
+      <button id="sponsors-button23" ng-click="search(data.searchWord, data.sponsorCategory)" style="font-size:12px;border-radius:10px 10px 10px 10px;" class="button button-dark button-small icon ion-ios-search send-field"> Search</button>
+      <button id="sponsors-button24" ng-click="resetSearch()" style="font-size:12px;border-radius:10px 10px 10px 10px;" class="button button-dark button-small icon ion-ios-refresh-empty reset-field"> Reset</button>
+    </form>
+    <div id="sponsors-button-bar1" ng-show="daysLevelButtons" class="button-bar buttons-box">
+      <button id="sponsors-button9" ng-click="changeSection(1, 'Silver')" ng-model="data.sponsorCategory" ng-class="{'active': activeSection==1}" class="button button-balanced  button-block">Silver</button>
+      <button id="sponsors-button10" ng-click="changeSection(2, 'Gold')" ng-model="data.sponsorCategory" ng-class="{'active': activeSection==2}" class="button button-balanced  button-block">Gold</button>
+      <button id="sponsors-button11" ng-click="changeSection(3, 'Platinum')" ng-model="data.sponsorCategory" ng-class="{'active': activeSection==3}" class="button button-balanced  button-block">Platinum</button>
+    </div>
+    <ion-list id="sponsors-list8" class="sponsors-list">
+      <ion-item class="item-avatar  sponsor-list-item" id="sponsors-list-item30" ui-sref="menu.sponsor({&quot;id&quot;:&quot;&quot;+sponsor.id+&quot;&quot;})" ng-repeat="sponsor in allSponsors | orderBy:'title.rendered'" auto-list-divider-by-name="" auto-list-divider-by-name-value="{{sponsor.title.rendered}}">
+        <img src="{{sponsor.better_featured_image.source_url}}">
+        <h2>{{sponsor.title.rendered}}
+          <p>{{sponsor.acf.level[0].value}}</p>
+        </h2>
+        <ion-option-button class="button-balanced">
+          <i style="font-size: 12px" class="icon ion-star"> Favorite</i>
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

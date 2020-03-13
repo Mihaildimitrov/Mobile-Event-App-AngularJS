@@ -1,0 +1,41 @@
+<ion-view title="Session" id="page12" class="session-container">
+  <ion-content padding="true" class="has-header">
+    <h3 id="session-heading4" style="color:#000000;">{{singleSession.name}}</h3>
+    <div id="session-markdown17" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">
+        <strong>Time:</strong>
+        {{singleSession.startTime}} - {{singleSession.endTime}}</p>
+
+      <p style="color:#000000;">
+        <strong>Info:</strong>
+      </p>
+    </div>
+    <div id="session-markdown23" ng-bind-html="singleSession.sessionDescription" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">
+        <strong>Info:</strong>
+      </p>
+    </div>
+    <div id="session-markdown19" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">
+        <strong>Room:</strong>
+        {{singleSession.location}}</p>
+    </div>
+    <div id="session-markdown14" class="show-list-numbers-and-dots abstract-field">
+      <p style="color:#000000;">
+        <strong>Abstracts:</strong>
+      </p>
+    </div>
+    <ion-list id="session-list21">
+      <ion-item id="session-list-item64" ui-sref="menu.abstract({&quot;id&quot;:&quot;&quot;+slot.abstract.ID+&quot;&quot;})" ng-repeat="slot in singleSession.slots" class="abstract-item">
+        <div class="abstract-container">
+          <p class="time">{{slot.start_time}} - {{slot.end_time}}</p>
+          <p class="abstract-name">{{slot.abstract.post_title}}</p>
+          <div class="speakers-box">
+            <span class="speaker-label">Speakers:</span>
+            <span class="speakers-name" ng-repeat="speaker in slot.speakers">{{speaker.post_title}}, </span>
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,23 @@
+<ion-view title="Exhibitor" id="page18">
+  <ion-content padding="true" class="has-header">
+    <div>
+      <img src="{{singleExhibitor.logo}}" style="display: block; width: 150px; height: auto; margin-left: auto; margin-right: auto;">
+    </div>
+    <h3 id="exhibitor-heading15" style="color:#000000;text-align:center;">{{singleExhibitor.name}}</h3>
+    <div id="exhibitor-markdown25" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">
+        <strong>Description:</strong>
+      </p>
+    </div>
+    <div id="exhibitor-markdown26" ng-bind-html="singleExhibitor.exhibitorDescription" class="show-list-numbers-and-dots"></div>
+    <div id="exhibitor-markdown18" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">
+        <strong>Contact Info:</strong>
+      </p>
+
+      <p style="color:#000000;">Website: {{singleExhibitor.website}}</p>
+
+      <p style="color:#000000;">Address: {{singleExhibitor.address}}</p>
+    </div>
+  </ion-content>
+</ion-view>

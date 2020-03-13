@@ -1,0 +1,25 @@
+<ion-view title="Exhibitors" id="page5" class="exhibitors-list-container">
+  <ion-nav-buttons side="right" class="has-header">
+    <button class="button button-icon icon ion-android-search" ng-click="showSearch()"></button>
+  </ion-nav-buttons>
+  <ion-content padding="true" class="has-header">
+    <form id="exhibitors-form7" class="list search-form" ng-show="showSearchMenu">
+      <label class="item item-input search-field" id="exhibitors-search9">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="search" placeholder="" ng-model="data.searchWord">
+      </label>
+      <button id="exhibitors-button25" ng-click="search(data.searchWord)" style="color:#FFFFFF;font-size:12px;border-radius:10px 10px 10px 10px;" class="button button-dark button-small icon ion-ios-search send-field"> Search</button>
+      <button id="exhibitors-button26" ng-click="resetSearch()" style="color:#FFFFFF;font-size:12px;border-radius:10px 10px 10px 10px;" class="button button-dark button-small icon ion-ios-refresh-empty reset-field"> Reset</button>
+    </form>
+    <ion-list id="exhibitors-list11" class="exhibitors-list">
+      <ion-item class="item-avatar  exhibitor-list-item" id="exhibitors-list-item29" ui-sref="menu.exhibitor({&quot;id&quot;:&quot;&quot;+exhibitor.id+&quot;&quot;})" ng-repeat="exhibitor in allExhibitors | filter:filterDataExhibitors | orderBy:'title.rendered'"
+        auto-list-divider-by-name="" auto-list-divider-by-name-value="{{exhibitor.title.rendered}}">
+        <img src="{{exhibitor.better_featured_image.source_url}}">
+        <h2>{{exhibitor.title.rendered}}</h2>
+        <ion-option-button class="button-balanced">
+          <i style="font-size: 12px" class="icon ion-star"> Favorite</i>
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

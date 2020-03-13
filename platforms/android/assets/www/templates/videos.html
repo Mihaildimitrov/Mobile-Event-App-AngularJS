@@ -1,0 +1,20 @@
+<ion-view title="Videos" id="page27" class="videos-container">
+  <ion-nav-buttons side="right" class="has-header">
+    <button class="button button-icon icon ion-android-search" ng-click="showSearch()"></button>
+  </ion-nav-buttons>
+  <ion-content padding="true" class="has-header">
+    <form id="videos-form10" class="list search-form" ng-show="showSearchMenu">
+      <label class="item item-input search-field" id="videos-search11">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="search" placeholder="" ng-model="data.search" ng-change="search()">
+      </label>
+    </form>
+    <ion-list id="videos-list18">
+      <ion-item class="item-avatar" id="videos-list-item55" ui-sref="menu.video({&quot;videokey&quot;:&quot;&quot;+video.key+&quot;&quot;})" ng-repeat="video in narrowed_tutorials">
+        <img src="https://img.youtube.com/vi/{{video.id}}/maxresdefault.jpg">
+        <h2>{{video.name}}</h2>
+        <p style="white-space:normal;">{{video.description}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

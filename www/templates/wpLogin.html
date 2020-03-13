@@ -1,0 +1,23 @@
+<ion-view title="Wp Login">
+  <ion-content padding="true" class="has-header login-page">
+    <form name="login_form" novalidate="">
+      <div>
+        <label for="username">Username:</label>
+        <input id="username" type="text" name="user_name" ng-model="user.userName" required="">
+        <p ng-show="login_form.user_name.$dirty &amp;&amp; login_form.user_name.$invalid" class="error-field">Username is required.</p>
+        <label for="pass">Password:</label>
+        <input id="pass" type="password" name="password" ng-model="user.password" required="">
+        <p ng-show="login_form.password.$dirty &amp;&amp; login_form.password.$invalid" class="error-field">Password is required.</p>
+        <p ng-show="thereIsntUser" class="error-message">{{error}}</p>
+        <p ng-show="thereIsUser" class="success-message">{{success}}</p>
+        <button type="submit" class="login button button-balanced button-block icon ion-log-in" ng-click="doLogin()" ng-disabled="login_form.$invalid"> Log in</button>
+      </div>
+    </form>
+    <div class="alternative-actions">
+      <!--<button type="button" class="forgot-pass button-inline" ng-click="" >Forgot Password?</button>-->
+      <a class="forgot-pass button button-dark button-small" ui-sref="menu.forgotPassword">Forgot Password?</a>
+      <!--<button type="button" class="register button-inline" ng-click="" >Sign Up</button>-->
+      <a class="register button button-dark button-small" ui-sref="menu.registration">Sign Up</a>
+    </div>
+  </ion-content>
+</ion-view>

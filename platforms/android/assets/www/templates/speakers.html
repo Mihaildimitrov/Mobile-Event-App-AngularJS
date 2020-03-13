@@ -1,0 +1,28 @@
+<ion-view title="Speakers" id="page20" class="speakers-list-container">
+  <ion-nav-buttons side="right" class="has-header">
+    <button class="button button-icon icon ion-android-search" ng-click="showSearch()"></button>
+  </ion-nav-buttons>
+  <ion-content padding="true" class="has-header">
+    <form id="speakers-form4" class="list search-form" ng-show="showSearchMenu">
+      <label class="item item-input search-field" id="speakers-search6">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="search" placeholder="" ng-model="data.searchWord">
+      </label>
+      <button id="speakers-button27" ng-click="search(data.searchWord)" style="color:#FFFFFF;font-size:12px;border-radius:10px 10px 10px 10px;" class="button button-dark button-small icon ion-ios-search send-field"> Search</button>
+      <button id="speakers-button28" ng-click="resetSearch()" style="color:#FFFFFF;font-size:12px;border-radius:10px 10px 10px 10px;" class="button button-dark button-small icon ion-ios-refresh-empty reset-field"> Reset</button>
+    </form>
+    <ion-list id="speakers-list7" class="speakers-list">
+      <ion-item class="item-thumbnail-left  speaker-list-item" id="speakers-list-item24" ui-sref="menu.speaker({&quot;id&quot;:&quot;&quot;+speaker.id+&quot;&quot;})" ng-repeat="speaker in allSpeakers | orderBy:'title.rendered'" auto-list-divider-by-name=""
+        auto-list-divider-by-name-value="{{speaker.title.rendered}}">
+        <img src="{{speaker.acf.photo.url}}">
+        <h2>{{speaker.title.rendered}}
+          <p>{{speaker.acf.position}}
+            <br> {{speaker.acf.company}}</p>
+        </h2>
+        <ion-option-button class="button-balanced">
+          <i style="font-size: 12px" class="icon ion-star"> Favorite</i>
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

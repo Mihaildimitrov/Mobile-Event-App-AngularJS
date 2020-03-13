@@ -1,0 +1,71 @@
+<ion-side-menus enable-menu-with-back-views="true">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-dark">
+      <ion-nav-back-button></ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="side-menu21"></ion-nav-view>
+  </ion-side-menu-content>
+  <ion-side-menu side="left" id="side-menu21">
+    <ion-header-bar class="bar-dark">
+      <div class="title">Menu</div>
+    </ion-header-bar>
+    <ion-content padding="false" class="side-menu-left has-header side-menu-box">
+      <ion-list id="menu-list14" class="list-container">
+        <ion-item class="item-icon-left light" id="menu-list-item9" ui-sref="menu.wTC2017" menu-close="">
+          <i class="icon ion-home"></i>Home</ion-item>
+        <ion-item class="item-icon-left light" id="menu-list-item25" ui-sref="menu.wpLogin" menu-close="" ng-if="!isLogged">
+          <i class="icon ion-log-in"></i>Log In</ion-item>
+        <ion-item class="item-icon-left light" id="menu-list-item44" ui-sref="menu.registration" menu-close="" ng-if="!isLogged">
+          <i class="icon ion-android-create"></i>Registration</ion-item>
+        <ion-item class="item-icon-left light" id="menu-list-item18" ui-sref="menu.myAccount" menu-close="" ng-if="isLogged">
+          <i class="icon ion-navicon"></i>My Account</ion-item>
+        <ion-item class="item-icon-left light  log-out-button" id="menu-list-item45" ng-click="logOutUser()" ng-if="isLogged">
+          <i class="icon ion-log-out"></i>Log Out</ion-item>
+        <ion-item class="item-divider menu-dividers" id="menu-list-item-divider4"> Event Guide</ion-item>
+        <ion-item class="item-icon-left light" id="menu-list-item23" ui-sref="menu.welcomeMessage" menu-close="">
+          <i class="icon ion-ios-email"></i>Welcome Message</ion-item>
+        <ion-item class="item-icon-left light" id="menu-list-item26" ui-sref="menu.schedule" menu-close="">
+          <i class="icon ion-android-calendar"></i>Schedule</ion-item>
+        <ion-item class="item-icon-left light" id="menu-list-item27" ui-sref="menu.speakers" menu-close="">
+          <i class="icon ion-ios-people"></i>Speakers</ion-item>
+        <ion-item class="item-icon-left light" id="menu-list-item28" ui-sref="menu.sponsors" menu-close="">
+          <i class="icon ion-flag"></i>Sponsors</ion-item>
+        <ion-item class="item-icon-left light" id="menu-list-item31" ui-sref="menu.exhibitors" menu-close="">
+          <i class="icon ion-person-stalker"></i>Exhibitors</ion-item>
+        <ion-item class="item-icon-left light" id="menu-list-item32" ui-sref="menu.videos" menu-close="">
+          <i class="icon ion-ios-videocam"></i>Video</ion-item>
+        <ion-item class="item-icon-left light" id="menu-list-item33" ui-sref="menu.floorplan" menu-close="">
+          <i class="icon ion-ios-paperplane-outline"></i>Floorplan</ion-item>
+        <ion-item class="item-icon-left light" id="menu-list-item34" ui-sref="menu.news" menu-close="">
+          <i class="icon ion-earth"></i>News</ion-item>
+        <ion-item class="item-icon-left light" id="menu-list-item35" ui-sref="menu.search" menu-close="">
+          <i class="icon ion-android-search"></i>Search</ion-item>
+        <ion-item class="item-divider menu-dividers" id="menu-list-item-divider5"> General Information</ion-item>
+        <ion-item class="item-icon-left light" id="menu-list-item36" ui-sref="menu.formidableForm" menu-close="">
+          <i class="icon ion-clipboard"></i>Survey</ion-item>
+        <ion-item class="item-icon-left light" id="menu-list-item37" ui-sref="menu.socialNetworks" menu-close="">
+          <i class="icon ion-network"></i>Social Networks</ion-item>
+        <ion-item class="item-icon-left light" id="menu-list-item38" ui-sref="menu.googleMap" menu-close="">
+          <i class="icon ion-android-map"></i>Map</ion-item>
+        <ion-item class="item-icon-left light" id="menu-list-item46" ui-sref="menu.contact" menu-close="">
+          <i class="icon ion-ios-telephone"></i>Contact</ion-item>
+        <ion-item class="item-divider menu-dividers" id="menu-list-item-divider6"> Other</ion-item>
+        <ion-item class="item-icon-left light" id="menu-list-item48" ui-sref="menu.bookmarks" menu-close="">
+          <i class="icon ion-android-star"></i>Bookmarks</ion-item>
+        <ion-item class="item-icon-left light" id="menu-list-item49" ui-sref="menu.notifications" menu-close="">
+          <i class="icon ion-android-notifications"></i>Notifications</ion-item>
+        <ion-item class="item-icon-left light" id="menu-list-item50" ui-sref="menu.committee" menu-close="">
+          <i class="icon ion-android-contacts"></i>Committee</ion-item>
+        <ion-item class="item-icon-left light" id="menu-list-item51" ui-sref="menu.info" menu-close="">
+          <i class="icon ion-information"></i>Information</ion-item>
+        <ion-item class="item-icon-left light" id="menu-list-item52" ui-sref="menu.gallery" menu-close="">
+          <i class="icon ion-ios-photos"></i>Gallery</ion-item>
+        <ion-item class="item-icon-left light" id="menu-list-item53" ui-sref="menu.gallery" menu-close="">
+          <i class="icon ion-ios-paper"></i>My Notes</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

@@ -1,0 +1,9 @@
+{
+    "name": "eventapp",
+    "app_id": "",
+    "gulpStartupTasks": [
+        "sass",
+        "watch"
+    ],
+    "type": "ionic1"
+}

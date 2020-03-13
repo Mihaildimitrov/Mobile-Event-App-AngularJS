@@ -1,0 +1,507 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+$balanced: #add143;
+$royal: #808080;
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+.active-day {
+    // opacity: 1;
+    color: black !important;
+    font-weight: 500;
+    border-bottom: 2px solid $balanced;
+    padding: 0 0 2px 0;
+}
+
+.days-slider {
+    display: none;
+}
+
+ion-view {
+    .list {
+        .item-divider {
+            background: $royal;
+            color: white;
+            font-weight: bold;
+            padding: 4px !important;
+            font-size: 10px;
+            line-height: 12px;
+            min-height: 12px !important;
+        }
+    }
+}
+
+.scroll-wrapper {
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+    /* important: dimensions or positioning here! */
+}
+
+.scroll-wrapper iframe {
+    /* nada! */
+}
+
+.side-menu-box {
+    .log-out-button {
+        background: $dark;
+    }
+    background: $dark;
+    .menu-dividers {
+        background: lightgray;
+    }
+    .list-container {
+        .item {
+            border-color: gray;
+        }
+        .item-content {
+            background: $dark;
+        }
+    }
+}
+
+.search-form {
+    background: $dark;
+    padding: 10px 0 5px 0;
+    margin: -10px -10px 10px -10px;
+    .input-label {
+        font-size: 12px !important;
+        padding: 5px !important;
+        font-weight: 600;
+        color: gray;
+    }
+    .item-select select {
+        font-size: 12px;
+        font-weight: 600;
+        color: black;
+    }
+}
+
+.placeholder-icon :first-child {
+    padding-right: 6px;
+    margin-left: 6px;
+}
+
+.toogle-field {
+    width: 80%;
+    margin: 0 auto !important;
+    border-radius: 10px;
+    padding: 8px;
+    margin-bottom: 5px !important;
+    .checkbox {
+        position: absolute;
+        top: 50%;
+        right: 8px;
+        left: inherit !important;
+        z-index: 3;
+        margin-top: -21px;
+    }
+    // label {
+    //     position: absolute;
+    //     top: 2px !important;
+    //     right: 10px !important;
+    //     z-index: 3;
+    //}
+}
+
+.searchAll-button {
+    margin: 0 auto !important;
+    width: 50% !important;
+    border-color: #add143 !important;
+}
+
+.reset-field {
+    //margin: 0 auto;
+    margin-right: 10%;
+    float: right;
+    border: 1px solid $royal !important;
+    //box-shadow: 0px 0px 0px 2px $balanced;
+    padding: 0px 12px;
+}
+
+.send-field {
+    margin-left: 10%;
+    border: 1px solid $royal !important;
+    //box-shadow: 0px 0px 0px 2px $royal;
+    padding: 0px 12px;
+}
+
+.search-field {
+    border-radius: 10px !important;
+    width: 80%;
+    margin: 0 auto !important;
+    height: 35px;
+    margin-bottom: 5px !important;
+}
+
+.ion-bookmark {
+    color: #add143;
+}
+
+.select-field {
+    padding: 5px !important;
+    border-radius: 10px !important;
+    width: 80%;
+    margin: 0 auto !important;
+    margin-bottom: 5px !important;
+}
+
+.registration-page {
+    height: 100vh;
+}
+
+.home-container {
+    .home-page-header-container {
+        display: table;
+        .home-logo {
+            position: relative;
+        }
+        .home-page-text-container {
+            position: absolute;
+            top: 50px;
+            display: table-cell;
+            padding: 14px;
+            text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+            .title {
+                text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+            }
+            .sub-title {
+                text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+            }
+        }
+    }
+    .slider-container {
+        .slide-box {
+            height: 100%;
+            .row {
+                height: 30%;
+                text-align: center;
+                .col-33 {
+                    display: table;
+                    height: 100%;
+                    i {
+                        display: table-cell;
+                        vertical-align: middle;
+                        font-size: 1em;
+                        font-weight: bold;
+                        color: #58585B;
+                    }
+                    i:before {
+                        display: block;
+                        font-size: 2.5em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.speakers-list-container {
+    .speakers-list {
+        .speaker-list-item {
+            min-height: 48px;
+            a {
+                display: table;
+                width: 100%;
+                min-height: 48px;
+                padding: 5px 54px 5px 72px;
+            }
+            img {
+                border-radius: 50%;
+                vertical-align: middle;
+                display: table-cell;
+                max-width: 50px;
+                max-height: 50px;
+                top: inherit;
+                // width: 50px;
+                // height: 50px;
+            }
+            h2 {
+                vertical-align: middle;
+                display: table-cell;
+                font-size: 1em;
+                font-weight: bold;
+                white-space: normal;
+                p {
+                    font-size: 0.8em;
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+}
+
+.single-speaker-page {
+    .speaker-head-container {
+        padding: 10px;
+        background: $dark;
+        p {
+            color: white !important;
+            margin-bottom: 0;
+        }
+    }
+    .image {
+        img {
+            border-radius: 50%;
+            // padding-top: 10px;
+        }
+    }
+    .speaker-bio {
+        padding: 20px;
+    }
+    .speaker-sessions {
+        padding-left: 20px;
+    }
+}
+
+.sponsors-list-container {
+    .search-form {
+        background: rgb(68, 68, 68);
+        padding: 10px 0px 5px;
+        margin: 0px -10px 10px;
+    }
+    .buttons-box {
+        margin-top: -5px;
+    }
+    .scroll {
+        padding: 0 10px 10px 10px;
+    }
+    .sponsors-list {
+        .sponsor-list-item {
+            min-height: 48px;
+            a {
+                display: table;
+                width: 100%;
+                padding: 0px 54px 0px 72px;
+                min-height: 48px;
+            }
+            img {
+                height: auto;
+                border-radius: initial;
+                display: table-cell;
+                vertical-align: middle !important;
+            }
+            h2 {
+                display: table-cell;
+                vertical-align: middle !important;
+                white-space: normal;
+            }
+        }
+    }
+}
+
+.swiper-pagination {
+    display: none;
+}
+
+.session-slider {
+    margin-left: -10px !important;
+    margin-bottom: 10px;
+    margin-top: -10px !important;
+}
+
+.swiper-slide {}
+
+.schedule-list-container {
+    .days-nav {
+        text-align: center;
+        font-size: 12px;
+        span {
+            display: block;
+            font-size: 20px;
+        }
+        .col-20 {
+            color: gray;
+        }
+    }
+    .item {
+        padding: 2px 0 2px 0 !important;
+    }
+    .schedule-list {
+        a {
+            padding: 5px 5px 5px 5px !important;
+            font-size: 12px;
+        }
+        h1 {
+            // margin-bottom: 5px;
+            font-size: 13px;
+            white-space: normal;
+        }
+    }
+}
+
+.abstract-item {
+    a {
+        padding: 5px 5px 0 5px !important;
+        .abstract-container {
+            .time {
+                font-size: 12px;
+                margin: 0;
+                line-height: 14px;
+            }
+            .abstract-name {
+                font-size: 13px;
+                margin: 0;
+                line-height: 14px;
+            }
+            .speakers-box {
+                margin-top: -5px;
+            }
+            .speaker-label {
+                font-size: 10px;
+                font-weight: 500;
+                margin: 0;
+            }
+            .speakers-name {
+                font-size: 10px;
+                margin: 0;
+            }
+        }
+    }
+}
+
+.exhibitors-list-container {
+    .exhibitors-list {
+        .exhibitor-list-item {
+            min-height: 48px;
+            a {
+                display: table;
+                width: 100%;
+                padding: 0px 54px 0px 72px;
+                min-height: 48px;
+            }
+            img {
+                height: auto;
+                border-radius: initial;
+                display: table-cell;
+                vertical-align: middle !important;
+            }
+            h2 {
+                display: table-cell;
+                vertical-align: middle !important;
+                white-space: normal;
+            }
+        }
+    }
+}
+
+.news-list {
+    h2 {
+        white-space: normal;
+    }
+}
+
+.videos-container {
+    a {
+        h2 {
+            font-size: 14px;
+        }
+        p {
+            font-size: 12px;
+        }
+    }
+    img {
+        top: 30%;
+        max-width: 50px !important;
+        max-height: 50px !important;
+    }
+}
+
+.video-padding {
+    padding-left: 20px;
+}
+
+.google-map {
+    div {
+        padding: 0 !important;
+    }
+}
+
+.login-page,
+.forgot-page,
+.registration {
+    input {
+        margin-bottom: 10px;
+        border-bottom: 2px solid $balanced;
+        width: 100%;
+    }
+    label {
+        color: gray;
+        font-weight: bold;
+        font-size: 1em;
+        margin-bottom: 5px;
+    }
+    // Login Register Messages: 
+    .error-field {
+        color: red;
+        font-size: 1em;
+    }
+    .error-message {
+        color: red;
+        font-size: 1em;
+        text-align: center;
+    }
+    .success-message {
+        color: green;
+        font-size: 1em;
+        text-align: center;
+    }
+}
+
+.login-page {
+    .alternative-actions {
+        margin: 10px 0;
+        .forgot-pass {
+            float: left;
+        }
+        .register {
+            float: right;
+        }
+    }
+}
+
+.forgot-page {
+    .alternative-actions {
+        text-align: center;
+        .log-in {
+            float: left;
+        }
+        .register {
+            float: right;
+        }
+    }
+}
+
+.registration {
+    h3 {
+        text-align: center;
+    }
+}
+
+// This code is required for Angular Google Maps to funciton
+ui-gmap-google-map {
+    height: 100%;
+    width: 100%;
+    display: block;
+    .angular-google-map {
+        height: 100%;
+        .angular-google-map-container {
+            height: 100%;
+        }
+    }
+}

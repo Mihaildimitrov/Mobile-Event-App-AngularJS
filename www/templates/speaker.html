@@ -1,0 +1,20 @@
+<ion-view title="Speaker" id="page19" class="single-speaker-page">
+  <ion-content padding="false" class="has-header">
+    <div id="speaker-container1" class="speaker-head-container">
+      <div class="image">
+        <img src="{{singleSpeakerInfo.image}}" style="display: block; width: 150px; height: 150px; margin-left: auto; margin-right: auto;">
+      </div>
+      <h3 id="speaker-heading11" style="color:#fff;text-align:center;">{{singleSpeakerInfo.name}}</h3>
+      <div id="speaker-markdown5" style="text-align:center;" class="show-list-numbers-and-dots">
+        <p style="color:#000000;">{{singleSpeakerInfo.position}}</p>
+
+        <p style="color:#000000;">{{singleSpeakerInfo.company}}</p>
+      </div>
+    </div>
+    <div id="speaker-markdown8" ng-bind-html="singleSpeakerInfo.bio" style="text-align:justify;" class="show-list-numbers-and-dots speaker-bio"></div>
+    <h4 id="speaker-heading13" style="color:#000000;" class="speaker-sessions">Sessions:</h4>
+    <ion-list id="speaker-list16">
+      <ion-item id="speaker-list-item10" ui-sref="menu.session({&quot;id&quot;:&quot;&quot;+session.ID+&quot;&quot;})" ng-repeat="session in singleSpeakerInfo.sessions">{{session.post_title}}</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

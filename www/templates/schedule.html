@@ -1,0 +1,72 @@
+<ion-view title="Schedule" id="page2" class="schedule-list-container">
+  <ion-nav-buttons side="right" class="has-header">
+    <button class="button button-icon icon ion-android-search" ng-click="showSearch()"></button>
+  </ion-nav-buttons>
+  <ion-content padding="true" class="has-header">
+    <form id="schedule-form6" class="list search-form" ng-show="showSearchMenu">
+      <label class="item item-input search-field" id="schedule-search8">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="search" placeholder="" ng-model="data.searchWord">
+      </label>
+      <label class="item item-select select-field" id="schedule-select2" name="selectLocation">
+        <span class="input-label">Pick room:</span>
+        <select ng-model="data.room" ng-options="room.id as room.label for room in rooms"></select>
+      </label>
+      <label class="item item-select select-field" id="schedule-select10" name="selectLocation">
+        <span class="input-label">Pick day:</span>
+        <select ng-model="data.day" ng-options="day.id as day.label for day in days"></select>
+      </label>
+      <button id="schedule-button16" ng-click="search(data.searchWord, data.room, data.day)" style="color:#FFFFFF;font-size:12px;border-radius:10px 10px 10px 10px;" class="button button-dark button-small icon-left ion-ios-search send-field">Search</button>
+      <button id="schedule-button20" ng-click="resetSearch()" style="color:#FFFFFF;font-size:12px;border-radius:10px 10px 10px 10px;" class="button button-dark button-small icon-left ion-ios-refresh-empty reset-field"> Reset</button>
+    </form>
+    <ion-slides disable-side-menu-drag="" options="{'loop': false}" slider="slider6" delegate-handle="slider6" id="schedule-slider6" ng-class="{'days-slider': daysSlider==false}" style="width:calc(100% + 20px);height:50px;margin-left:-10px;" class="session-slider">
+      <ion-slide-page id="schedule-slide216">
+        <div class="row days-nav">
+          <div ng-class="{'active-day': activeSection==1}" ng-click="changeSection(1, 4)" ng-model="data.day" class="col-20">FRI
+            <span>09</span>
+          </div>
+          <div ng-class="{'active-day': activeSection==2}" ng-click="changeSection(2, 5)" ng-model="data.day" class="col-20">SAT
+            <span>10</span>
+          </div>
+          <div ng-class="{'active-day': activeSection==3}" ng-click="changeSection(3, 6)" ng-model="data.day" class="col-20">SUN
+            <span>11</span>
+          </div>
+          <div ng-class="{'active-day': activeSection==4}" ng-click="changeSection(4, 7)" ng-model="data.day" class="col-20">MON
+            <span>12</span>
+          </div>
+          <div ng-class="{'active-day': activeSection==5}" ng-click="changeSection(5, 8)" ng-model="data.day" class="col-20">TUE
+            <span>13</span>
+          </div>
+        </div>
+      </ion-slide-page>
+      <ion-slide-page id="schedule-slide217">
+        <div class="row days-nav">
+          <div ng-class="{'active-day': activeSection==6}" ng-click="changeSection(6, 9)" ng-model="data.day" class="col-20">WED
+            <span>14</span>
+          </div>
+          <div ng-class="{'active-day': activeSection==7}" ng-click="changeSection(7, 10)" ng-model="data.day" class="col-20">THU
+            <span>15</span>
+          </div>
+          <div ng-class="{'active-day': activeSection==8}" ng-click="changeSection(8, 11)" ng-model="data.day" class="col-20">FRI
+            <span>16</span>
+          </div>
+          <div ng-class="{'active-day': activeSection==9}" ng-click="changeSection(9, 12)" ng-model="data.day" class="col-20">SAT
+            <span>17</span>
+          </div>
+          <div ng-class="{'active-day': activeSection==10}" ng-click="changeSection(10, 13)" ng-model="data.day" class="col-20">SUN
+            <span>18</span>
+          </div>
+        </div>
+      </ion-slide-page>
+    </ion-slides>
+    <ion-list id="schedule-list9" class="schedule-list">
+      <ion-item id="schedule-list-item61" ui-sref="menu.session({&quot;id&quot;:&quot;&quot;+session.id+&quot;&quot;})" ng-repeat="session in allSessions | orderBy:'acf.start_time'" auto-list-divider="" auto-list-divider-value="{{session.acf.start_time}}"
+       >
+        <h1>{{session.title.rendered}}</h1> {{session.acf.start_time}} — {{session.acf.end_time}} | Room: {{session.locations[0]}}
+        <ion-option-button class="button-balanced">
+          <i style="font-size: 12px" class="icon ion-star"> Favorite</i>
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
